@@ -11,13 +11,17 @@ class User:
         
     def make_deposit(self, amount):	# takes an argument that is the amount of the deposit
         self.account_balance += amount
+        return self
     def make_withdrawal(self,amount):
         self.account_balance -= amount
+        return self
     def display_user_balance(self):
         print(f"User: {self.name} ,Balence {self.account_balance}")
+        return self
     def transfer_money(self, other_user, amount):
         self.account_balance = self.account_balance - amount
         other_user.account_balance = other_user.account_balance + amount
+        return self
 
 
 adrien = User("Adrien", "adrien@python.com")
